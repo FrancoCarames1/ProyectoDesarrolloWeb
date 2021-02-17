@@ -1,0 +1,471 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fdfdfd;
+  font-family: montserrat; }
+
+footer {
+  background-color: #16344d;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white; }
+  footer div {
+    display: inline-block; }
+    footer div a {
+      text-decoration: none;
+      font-size: 22px;
+      color: #B4D330;
+      margin: 2%; }
+      footer div a:hover {
+        color: #1586a8;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; }
+
+nav {
+  background-color: #16344d;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  height: 62px; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+    nav ul a {
+      display: block;
+      padding: 20px;
+      font-size: 20px; }
+      nav ul a:hover {
+        background-color: #296372; }
+  nav a {
+    text-decoration: none;
+    color: white; }
+  nav .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px; }
+  nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out; }
+  nav .iconoMenu {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer; }
+    nav .iconoMenu .iconoNav {
+      background: white;
+      display: block;
+      height: 2.5px;
+      width: 18px;
+      position: relative;
+      transition: background .2s ease-out; }
+      nav .iconoMenu .iconoNav:before {
+        background: white;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        transition: all .2s ease-out; }
+      nav .iconoMenu .iconoNav:after {
+        background: white;
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -5px;
+        transition: all .2s ease-out; }
+  nav .botonMenu {
+    display: none; }
+    nav .botonMenu:checked ~ .menu {
+      max-height: 320px;
+      background-color: #16344dc5; }
+    nav .botonMenu:checked ~ .iconoMenu .iconoNav {
+      background: transparent; }
+      nav .botonMenu:checked ~ .iconoMenu .iconoNav:before {
+        transform: rotate(-45deg);
+        top: 0; }
+      nav .botonMenu:checked ~ .iconoMenu .iconoNav:after {
+        transform: rotate(45deg);
+        top: 0; }
+
+.activa {
+  color: #B4D330; }
+
+h1 {
+  border: 6px ridge orange;
+  border-radius: 60px;
+  padding: 1%;
+  background-color: rgba(0, 0, 0, 0.301);
+  font-size: 400%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #B4D330;
+  text-shadow: 5px 5px 20px black; }
+  h1:hover {
+    transform: scale(1.1);
+    cursor: none; }
+
+h2 {
+  margin-top: 100px;
+  font-size: 300%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+main {
+  min-height: 72vh; }
+  main img {
+    width: 100%; }
+
+.recuadro {
+  margin-bottom: 4%;
+  box-shadow: 0 5px 8px black;
+  background-image: url(/img/imagenPortada5.jpg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.izquierda {
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.centro {
+  width: 35%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.derecha {
+  width: 30%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.boton {
+  margin: 2%;
+  padding: 1%;
+  color: black;
+  font-size: 15px;
+  background-color: #B4D330;
+  border: solid #689368;
+  box-shadow: 0 1px 3px black;
+  border-radius: 10px; }
+  .boton:hover {
+    background-color: #1586a8;
+    color: #fdfdfd;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
+
+.introFlex, .flexHoja, .idea .ideaFlex {
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.intro {
+  font-size: 2rem;
+  padding-bottom: 1rem; }
+
+.secciones {
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+
+.introduccion {
+  padding-left: 5%;
+  padding-right: 5%; }
+  .introduccion .containers {
+    text-decoration: none;
+    display: block;
+    border: 5px solid #16344d;
+    border-radius: 15px;
+    padding-top: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    background-color: #7094a8;
+    color: black;
+    font-size: 1.3rem; }
+    .introduccion .containers h3 {
+      text-decoration: underline #16344d; }
+    .introduccion .containers:hover {
+      transform: rotateY(25deg);
+      text-shadow: 8px 8px 8px black;
+      box-shadow: 8px 8px 8px black; }
+
+.grilla {
+  margin-top: 3%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-areas: " imagen1 imagen2 imagen3" "imagen4 imagen5 imagen6"; }
+  .grilla .imagenes {
+    height: 100%; }
+
+#imagen1 {
+  grid-area: imagen1; }
+
+#imagen2 {
+  grid-area: imagen2; }
+
+#imagen3 {
+  grid-area: imagen3; }
+
+#imagen4 {
+  grid-area: imagen4; }
+
+#imagen5 {
+  grid-area: imagen5; }
+
+#imagen6 {
+  grid-area: imagen6; }
+
+.imagenes:hover {
+  transform: scale(1.05); }
+
+.nombre {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3rem; }
+
+.flexHoja {
+  margin-top: 4%;
+  margin-bottom: 4%; }
+  .flexHoja .hojaForm {
+    width: 35rem;
+    padding: 3%;
+    padding-right: 4%;
+    background-color: #3e7d91;
+    border: 8px outset #04566E;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px black;
+    font-size: 1.25rem; }
+    .flexHoja .hojaForm .ancho {
+      width: 100%;
+      padding: 5px; }
+      .flexHoja .hojaForm .ancho input {
+        margin-left: 2%; }
+        .flexHoja .hojaForm .ancho input:focus {
+          color: white;
+          background-color: #3b3737; }
+      .flexHoja .hojaForm .ancho textarea {
+        width: 100%;
+        height: 200px; }
+        .flexHoja .hojaForm .ancho textarea:focus {
+          color: white;
+          background-color: #3b3737; }
+
+.padreTarjetas {
+  display: flex;
+  justify-content: space-around; }
+  .padreTarjetas .tarjeta {
+    margin-top: 2%;
+    width: 40%;
+    text-align: center;
+    border: 6px inset;
+    border-color: #16344d;
+    background: linear-gradient(-75deg, black 30%, rgba(0, 0, 0, 0) 30%), #296372;
+    border-radius: 40px;
+    color: white;
+    font-size: 18px;
+    padding: 2%; }
+    .padreTarjetas .tarjeta p {
+      padding: 1%;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8rem; }
+    .padreTarjetas .tarjeta .gifs {
+      height: 15vw;
+      width: 15rem;
+      margin-top: 2%; }
+
+.idea {
+  margin-top: 3rem; }
+  .idea h2 {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .idea .ideaFlex .parrafo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Arial, Helvetica, sans-serif; }
+
+.gridPaises {
+  display: grid;
+  grid-template-areas: "opciones contenido";
+  grid-template-columns: 30vw 1fr;
+  grid-template-rows: 100vh;
+  margin-top: 62px; }
+
+.opciones {
+  grid-area: opciones;
+  background-color: #7094a8;
+  color: white; }
+  .opciones .navPaises {
+    list-style-position: inside;
+    line-height: 4rem;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center; }
+    .opciones .navPaises li a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: #000; }
+      .opciones .navPaises li a:hover {
+        font-size: 1.8rem;
+        background-color: #4772c2; }
+  .opciones .tituloPaises {
+    margin-top: 30px;
+    margin-bottom: 10px; }
+
+.contenido {
+  grid-area: contenido;
+  line-height: 2rem;
+  overflow: auto; }
+  .contenido h3 {
+    font-size: 2rem;
+    margin-bottom: 10px; }
+  .contenido h5 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .contenido ul {
+    list-style-position: inside;
+    font-size: 1.2rem; }
+  .contenido p {
+    font-size: 1.2rem;
+    max-width: 60ch; }
+  .contenido .pais1 {
+    background-color: white;
+    padding: 5%; }
+  .contenido .pais2 {
+    background-color: #b4b4b4;
+    padding: 5%; }
+
+.tituloPaises {
+  grid-area: titulo;
+  margin: 0; }
+
+.experiencias {
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 30px; }
+  .experiencias ul {
+    list-style: none; }
+    .experiencias ul .historias {
+      border: #022831;
+      border-style: outset;
+      padding: 15px;
+      background-color: #7abace;
+      color: black;
+      margin-bottom: 3%;
+      line-height: 1.8rem;
+      font-size: 1.2rem; }
+      .experiencias ul .historias h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline #3a4f77; }
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-10deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@media (min-width: 1065px) {
+  nav li {
+    float: left; }
+    nav li a {
+      padding: 20px 30px; }
+  nav .menu {
+    clear: none;
+    float: right;
+    max-height: none; }
+  nav .iconoMenu {
+    display: none; }
+  .recuadro {
+    background-image: url(/img/imagenPortada1.jpg); }
+  .introduccion {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .introduccion .containers {
+      width: 20%; } }
+
+@media (max-width: 1065px) {
+  h1 {
+    color: black;
+    background: none;
+    border-style: none;
+    text-shadow: cyan 3px 3px 30px; }
+  h2 {
+    font-size: 2rem; }
+  .intro {
+    font-size: 1.5rem;
+    line-height: 2rem; }
+  .opciones {
+    grid-area: opciones;
+    background-color: #7094a8;
+    color: white; }
+    .opciones .navPaises {
+      line-height: 4rem;
+      font-size: 1.2rem;
+      text-align: center; }
+      .opciones .navPaises li a {
+        display: block;
+        text-decoration: none; }
+        .opciones .navPaises li a:hover {
+          font-size: 1.2rem; }
+    .opciones .tituloPaises {
+      font-size: 1.4rem; }
+  .contenido p {
+    font-size: 1.2rem; }
+  .contenido ul {
+    font-size: 1.2rem; }
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+    grid-template-areas: "imagen1"  "imagen2" "imagen3" "imagen4" "imagen5" "imagen6"; }
+  .padreTarjetas {
+    flex-direction: column; }
+    .padreTarjetas .tarjeta {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%; }
+      .padreTarjetas .tarjeta .gifs {
+        height: 50%;
+        width: 70%; }
+  .idea .parrafo {
+    font-size: 1.4rem;
+    line-height: 2rem; } }

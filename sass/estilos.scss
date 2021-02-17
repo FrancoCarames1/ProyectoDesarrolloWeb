@@ -1,0 +1,665 @@
+@import "_paleta.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $blanco;
+    font-family: montserrat;
+}
+
+footer{
+    background-color: $azul;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+    div{
+        display: inline-block;
+    
+        a{
+            text-decoration: none;
+            font-size: 22px;
+            color: #B4D330;
+            margin: 2%;
+        
+            &:hover{
+                color: #1586a8;
+                animation-name: shake;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+
+nav{
+    background-color: $azul;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    height: 62px;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    
+        a{
+            display: block;
+            padding: 20px;
+            font-size: 20px;
+        
+            &:hover{
+                background-color:$azulClaro ;
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    .logo{
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+    
+    .menu{
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    
+    .iconoMenu{
+        padding: 28px 20px;
+        position: relative;
+        float: right;
+        cursor: pointer;
+        
+        .iconoNav{
+            background: white;
+            display: block;
+            height: 2.5px;
+            width: 18px;
+            position: relative;
+            transition: background .2s ease-out;
+        
+            &:before{
+                background: white;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 5px;
+                transition: all .2s ease-out;
+            }
+
+            &:after{
+                background: white;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: -5px;
+                transition: all .2s ease-out;
+            }
+        }
+    }
+    
+    .botonMenu{
+        display: none;
+    
+        &:checked ~ .menu{
+            max-height: 320px;
+            background-color: #16344dc5;
+        }
+    
+        &:checked ~ .iconoMenu .iconoNav{
+            background:transparent ;
+        
+            &:before{
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            &:after{
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
+    }
+}
+
+.activa{
+    color: #B4D330;
+}
+
+h1{
+    border: 6px ridge orange;
+    border-radius: 60px;
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.301);
+    font-size: 400%;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: $verde;
+    text-shadow: 5px 5px 20px black;
+
+    &:hover{   
+        transform: scale(1.1);
+        cursor: none;
+    }
+}
+
+h2{
+    margin-top: 100px;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main{
+    min-height: 72vh;
+
+    img{
+        width: 100%;
+    }
+}
+
+.recuadro{    
+    margin-bottom: 4%;
+    box-shadow: 0 5px 8px black;
+    background-image: url(/img/imagenPortada5.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.izquierda{
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.centro{
+    width: 35%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.derecha{
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton{
+    margin: 2%;
+    padding: 1%;
+    color: black;
+    font-size: 15px;
+    background-color: #B4D330;
+    border: solid #689368;
+    box-shadow: 0 1px 3px black;
+    border-radius: 10px;
+
+    &:hover{
+        background-color: #1586a8;
+        color: $blanco;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.introFlex{
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.intro{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.secciones{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.introduccion{
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .containers{
+        text-decoration: none;
+        display: block;
+        border: 5px solid $azul;
+        border-radius: 15px;
+        padding-top: 1.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        background-color: $celeste;
+        color: black;
+        font-size: 1.3rem;
+        
+        h3{
+            text-decoration: underline $azul;
+        }
+
+        &:hover{
+            transform: rotateY(25deg);
+            text-shadow: 8px 8px 8px black;
+            box-shadow: 8px 8px 8px black;
+        }
+    }    
+}
+
+
+.grilla{
+    margin-top: 3%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(2,2fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        " imagen1 imagen2 imagen3"
+        "imagen4 imagen5 imagen6"
+    ;
+
+    .imagenes{
+        height: 100%;
+    }
+}
+
+@for $i from 1 through 6{
+    #imagen#{$i} {
+        grid-area: imagen#{$i};
+    }
+}
+
+.imagenes:hover{
+    transform: scale(1.05);
+}
+
+.nombre{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem;
+}
+
+.flexHoja{
+    @extend .introFlex;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+    .hojaForm{
+        width: 35rem;
+        padding: 3%;
+        padding-right: 4%;
+        background-color: #3e7d91;
+        border: 8px outset #04566E;
+        border-radius: 2rem;
+        box-shadow: 0 0 10px black;
+        font-size: 1.25rem;
+
+        .ancho{
+            width: 100%;
+            padding: 5px;
+        
+            input{
+                margin-left: 2%;
+
+                &:focus{
+                    color: white;
+                    background-color: rgb(59, 55, 55);
+                }
+            }
+
+            textarea{
+                width: 100%;
+                height: 200px;
+            
+                &:focus{
+                    color: white;
+                    background-color: rgb(59, 55, 55);
+                }
+            }
+        }
+    }
+}
+
+.padreTarjetas{
+    display: flex;
+    justify-content: space-around;
+
+    .tarjeta{
+        margin-top: 2%;
+        width: 40%;
+        text-align: center;
+        border: 6px inset;
+        border-color: $azul;
+        background: linear-gradient(-75deg, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%), $azulClaro;
+        border-radius: 40px;
+        color: white;
+        font-size: 18px;
+        padding: 2%;
+    
+        p{
+            padding: 1%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8rem;
+        }
+
+        .gifs{
+            height: 15vw;
+            width: 15rem;
+            margin-top: 2%;
+        }
+    }
+}
+
+.idea{
+    margin-top: 3rem;
+
+    h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .ideaFlex{
+        @extend .introFlex;
+
+        .parrafo{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+    }
+}
+
+.gridPaises{
+    display: grid;
+    grid-template-areas: "opciones contenido";
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: 100vh;
+    margin-top: 62px;
+}
+
+.opciones{
+    grid-area: opciones;
+    background-color: rgb(112, 148, 168);
+    color: white;
+
+    .navPaises{
+        list-style-position: inside;
+        line-height: 4rem;
+        list-style: none;
+        font-size: 1.5rem;
+        text-align: center;
+
+        li{
+            a{
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                    font-size: 1.8rem;
+                    background-color: rgb(71, 114, 194);
+                }
+            }
+        }
+    }
+
+    .tituloPaises{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.contenido{
+    grid-area: contenido;
+    line-height: 2rem;
+    overflow: auto;
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    h5{
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    ul{
+        list-style-position: inside;
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        max-width: 60ch;
+    }
+
+    .pais1{
+        background-color: white;
+        padding: 5%;
+    }
+
+    .pais2{
+        background-color: rgb(180, 180, 180);
+        padding: 5%;
+    }
+}
+
+.tituloPaises{
+    grid-area: titulo;
+    margin: 0;
+}
+
+.experiencias{
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+
+    ul{
+        list-style: none;
+
+        .historias{
+            border: #022831;
+            border-style: outset;
+            padding: 15px;
+            background-color: #7abace;
+            color: black;
+            margin-bottom: 3%;
+            line-height: 1.8rem;
+            font-size: 1.2rem;
+
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: underline rgb(58, 79, 119);
+            }
+        }
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (min-width:1065px){
+    nav{
+        li{
+            float: left;
+        
+            a{
+                padding: 20px 30px;
+            }
+        }
+
+        .menu{
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+
+        .iconoMenu{
+            display: none;
+        }
+    }
+
+    .recuadro{
+        background-image: url(/img/imagenPortada1.jpg);
+    }
+
+    .introduccion{
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .containers{
+            width:20%;
+        }
+    }
+}
+
+@media (max-width:1065px){
+    h1{
+        color: rgb(0, 0, 0);
+        background: none;
+        border-style: none;
+        text-shadow: cyan 3px 3px 30px;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .intro{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .opciones{
+        grid-area: opciones;
+        background-color: rgb(112, 148, 168);
+        color: white;
+    
+        .navPaises{
+            line-height: 4rem;
+            font-size: 1.2rem;
+            text-align: center;
+    
+            li{
+                a{  
+                    display: block;
+                    text-decoration: none;
+    
+                    &:hover {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .tituloPaises{
+            font-size: 1.4rem;
+        }
+    }
+
+    .contenido{
+        p{
+            font-size: 1.2rem;
+        }
+
+        ul{
+            font-size: 1.2rem;
+        }
+    }
+
+    .grilla{
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(6,1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        grid-template-areas: 
+            "imagen1" 
+            "imagen2"
+            "imagen3"
+            "imagen4"
+            "imagen5"
+            "imagen6"
+        ;
+    }
+
+    .padreTarjetas{
+        flex-direction: column;
+        
+
+        .tarjeta{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        
+            .gifs{
+                height: 50%;
+                width: 70%;
+            }
+        }
+    }
+
+    .idea{
+        .parrafo{
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+}

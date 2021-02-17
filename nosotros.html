@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="información sobre Global Tour, surgimiento de idea y página de contacto.">
+    <meta name="keywords" content="sobre nosotros, Global Tour, Franco Ignacio Carames, Agustina Medone, contacto">
+    <!-- Título -->
+    <title>Nosotros | Global Tour</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Barra de navegación-->
+            <a href="index.html" class="logo">
+                Global Tour
+            </a>
+            <input class="botonMenu" type="checkbox" id="botonMenu">
+            <label class="iconoMenu" for="botonMenu"><span class="iconoNav"></span></label>
+            <ul class="menu">
+                    <li class="item"> 
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="paises.html">
+                            Países
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fotos.html">
+                            Fotos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="experiencias.html">
+                            Experiencias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html" class="activa">
+                            Nosotros
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sobre Nosotros -->
+        <section>
+            <h2>
+                Nosotros
+            </h2>
+            <div class="padreTarjetas">
+                <div class="tarjeta">
+                    <h3 class="nombre">
+                        Franco Carames
+                    </h3>
+                    <p>
+                        Buenas! Actualmente soy estudiante de ingeniería industrial y como a cualquier persona me encanta viajar. Con el tiempo me apasione también por programar por lo cual me adentré a la carrerra de desarrollador Full Stack.
+                    </p>
+                    <p>
+                        Desarrollador Web y Cofundador
+                    </p>
+                    <img src="https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif" alt="computer kid" class="gifs">
+                </div>
+                <div class="tarjeta">
+                    <h3 class="nombre">
+                        Agustina Medone
+                    </h3>    
+                    <p>
+                        Hola! Soy Agustina, estudiante de ingeniería industrial, y espero algún día poder trabajar desde casa para poder viajar por distintos países del mundo
+                    </p>
+                    <p>
+                        CoFundadora
+                    </p>
+                    <img src="https://media.giphy.com/media/ZAaaCK5RhUWxG/giphy.gif" alt="stitch" class="gifs">
+                </div>
+            </div>
+        </section>
+        <!-- Sección Idea -->
+        <section class="idea">
+            <h2>La idea...</h2>
+            <div class="ideaFlex">
+                <p class="parrafo">Comenzó de pensar qué podría hacer para el proyecto final del curso de desarrollo web. Me estaba costando elegir una de entre las 7 u 8 ideas que tenía, las cuales iban desde gaming hasta de cocina, entonces fui con mi novia, Agustina, y le pregunté si se le ocurría alguna idea para la página. Me dijo que sería una muy buena idea si la hacía acerca de viajes, y juntos pensamos qué podría tener las página para que no solo sea divertida de ver, pero también informativa para aquellos viajeros que necesiten información acerca de qué esperar de cada lugar.</p>
+            </div>
+        </section>
+        <!-- Sección de contacto -->
+        <section class="flexHoja">
+            <div class="hojaForm" id="formulario">
+                <h3>
+                    Comparte con nosotros!
+                </h3>
+                <form>
+                    <div class="ancho"><label for="nombreForm">Nombre: </label><input type="text" name="nombreForm" placeholder="Harry"></div>
+                    <div class="ancho"><label for="apellidoForm">Apellido: </label><input type="text" name="apellidoForm" placeholder="Potter"></div>
+                    <div class="ancho"><label for="mailForm">Mail: </label><input type="email" name="mailForm" placeholder="harrypotter@gmail.com"></div>
+                    <div class="ancho"><label for="contenidoForm">Contenido: </label></div>
+                    <div class="ancho"><textarea name="contenidoForm"></textarea></div>
+                    <fieldset class="ancho">
+                        <legend>Género: </legend>
+                        <input type="radio" name="genero" value="masculino">Masculino
+                        <input type="radio" name="genero" value="femenino">Femenino
+                        <input type="radio" name="genero" value="secreto">Prefiero no decirlo
+                    </fieldset>
+                    <div class="ancho">
+                        <label for="credito">¿Querés recibir crédito por la historia/artículo?</label>
+                        <select name="credito">
+                            <Option value="si">Sí</Option>
+                            <Option value="no">No</Option>
+                        </select>
+                    </div>
+                    <div class="ancho"><Label for="recibir">¿Querés recibir un mail cuando se publique?</Label><input type="checkbox" name="recibir"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="izquierda">
+            <img src="" alt="Logo">
+        </div>
+        <div class="centro">
+            <h3>Redes</h3>
+            <a href="" class="fab fa-whatsapp"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="" class="fab fa-facebook"></a>
+            <a href="" class="fab fa-twitter"></a>
+        </div>
+        <div class="derecha">
+            <h3>Contactanos</h3>
+            <form action="#formulario">
+                <input type="submit" class="boton" value="Vamos!"/>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
