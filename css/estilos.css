@@ -22,18 +22,43 @@ footer {
   footer div {
     display: inline-block; }
   footer .izquierda {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px; }
+    display: block;
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    footer .izquierda a img {
+      width: 80%;
+      border-radius: 10%; }
   footer .derecha {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px; }
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    footer .derecha .boton {
+      text-decoration: none;
+      width: 69px;
+      align-self: center;
+      margin-top: 0.4rem;
+      color: black;
+      font-size: 15px;
+      background-color: #B4D330;
+      border: solid #689368;
+      box-shadow: 0 1px 3px black;
+      border-radius: 10px; }
+      footer .derecha .boton:hover {
+        background-color: #299fc4;
+        color: #fdfdfd;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; }
   footer .centro {
-        width: 30%;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px; }
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
     footer .centro a {
       text-decoration: none;
       font-size: 22px;
@@ -45,21 +70,7 @@ footer {
         animation-duration: 1s;
         animation-iteration-count: infinite; }
 
-.izquierda {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.centro {
-  width: 30%;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.derecha {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+/* Barra de Nav */
 
 nav {
   background-color: #16344d;
@@ -138,6 +149,15 @@ nav {
 .activa {
   color: #B4D330; }
 
+/* Main */
+
+main {
+  min-height: 72vh; }
+  main img {
+    width: 100%; }
+
+/* Titulos */
+
 h1 {
   border: 6px ridge orange;
   border-radius: 60px;
@@ -157,10 +177,7 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; }
 
-main {
-  min-height: 72vh; }
-  main img {
-    width: 100%; }
+/* Bienvenida */
 
 .recuadro {
   margin-bottom: 4%;
@@ -171,24 +188,9 @@ main {
   justify-content: center;
   align-items: center; }
 
-.boton {
-  text-decoration: none;
-  width: auto;
-  display: block;
-  margin: 2%;
-  padding: 1%;
-  color: black;
-  font-size: 15px;
-  background-color: #B4D330;
-  border: solid #689368;
-  box-shadow: 0 1px 3px black;
-  border-radius: 10px; }
-  .boton:hover {
-    background-color: #299fc4;
-    color: #fdfdfd;
-    animation-name: shake;
-    animation-duration: 1s;
-    animation-iteration-count: infinite; }
+.intro {
+  font-size: 2rem;
+  padding-bottom: 1rem; }
 
 .introFlex, .flexHoja, .idea .ideaFlex {
   display: flex;
@@ -196,9 +198,7 @@ main {
   padding-left: 10%;
   padding-right: 10%; }
 
-.intro {
-  font-size: 2rem;
-  padding-bottom: 1rem; }
+/* Secciones de la Web*/
 
 .secciones {
   margin-top: 1rem;
@@ -227,6 +227,8 @@ main {
       transform: rotateY(25deg);
       text-shadow: 8px 8px 8px black;
       box-shadow: 8px 8px 8px black; }
+
+/* Sección de fotos */
 
 .grilla {
   margin-top: 3%;
@@ -265,9 +267,7 @@ main {
 .imagenes:hover {
   transform: scale(1.05);}
 
-.nombre {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 3rem; }
+/* Sección de contacto */
 
 .flexHoja {
   margin-top: 4%;
@@ -298,6 +298,26 @@ main {
         .flexHoja .hojaForm .ancho textarea:focus {
           color: white;
           background-color: #3b3737; }
+    .flexHoja .hojaForm .boton {
+      text-decoration: none;
+      width: auto;
+      display: block;
+      margin: 2%;
+      padding: 1%;
+      color: black;
+      font-size: 15px;
+      background-color: #B4D330;
+      border: solid #689368;
+      box-shadow: 0 1px 3px black;
+      border-radius: 10px; }
+      .flexHoja .hojaForm .boton:hover {
+        background-color: #299fc4;
+        color: #fdfdfd;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; }
+
+/* Sección Sobre Nosotros */
 
 .padreTarjetas {
   display: flex;
@@ -313,6 +333,9 @@ main {
     color: white;
     font-size: 18px;
     padding: 2%; }
+    .padreTarjetas .tarjeta .nombre {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3rem; }
     .padreTarjetas .tarjeta p {
       padding: 1%;
       font-family: Arial, Helvetica, sans-serif;
@@ -321,6 +344,8 @@ main {
       height: 15vw;
       width: 15rem;
       margin-top: 2%; }
+
+/* Sección Idea */
 
 .idea {
   margin-top: 3rem; }
@@ -332,12 +357,16 @@ main {
     line-height: 2rem;
     font-family: Arial, Helvetica, sans-serif; }
 
+/* Grilla de distribución de página paises */
+
 .gridPaises {
   display: grid;
   grid-template-areas: "opciones contenido";
   grid-template-columns: 30vw 1fr;
   grid-template-rows: 100vh;
   margin-top: 62px; }
+
+/* Navegación de Países */
 
 .opciones {
   grid-area: opciones;
@@ -360,6 +389,8 @@ main {
   .opciones .tituloPaises {
     margin-top: 30px;
     margin-bottom: 10px; }
+
+/* Información de Países */
 
 .contenido {
   grid-area: contenido;
@@ -385,9 +416,7 @@ main {
     background-color: #b4b4b4;
     padding: 5%; }
 
-.tituloPaises {
-  grid-area: titulo;
-  margin: 0; }
+/* Sección historias/experiencias */
 
 .experiencias {
   margin-top: 30px;
@@ -445,7 +474,7 @@ main {
     flex-direction: row;
     justify-content: space-around; }
     .introduccion .containers {
-      width: 20%; } }
+      width: 45%; } }
 
 @media (max-width: 1065px) {
   h1 {
@@ -454,7 +483,7 @@ main {
     border-style: none;
     text-shadow: cyan 3px 3px 30px; }
   h2 {
-    font-size: 2rem; }
+    font-size: 2.4rem; }
   .intro {
     font-size: 1.5rem;
     line-height: 2rem; }
@@ -488,15 +517,103 @@ main {
  "imagen4"
  "imagen5"
  "imagen6"; }
+  .idea .ideaFlex .parrafo {
+    font-size: 1.4rem;
+    line-height: 2rem; }
+  .padreTarjetas .tarjeta .nombre {
+    font-family: 'Brush Script MT', cursive;
+      font-size: 2rem; }
+  .padreTarjetas .tarjeta p {
+    padding: 1%;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6rem; }
+
+@media (max-width: 740px) {
+  h2 {
+    margin-top: 90px;
+    font-size: 1.8rem; }
+  .opciones .navPaises {
+    line-height: 4rem;
+    font-size: 1.1rem;
+    text-align: center; }
+    .opciones .navPaises li a:hover {
+      font-size: 1.2rem; }
+    .opciones .tituloPaises {
+      font-size: 1.3rem; }
+  .contenido p {
+    font-size: 1.1rem; }
+  .contenido h5 {
+    font-size: 1.3rem; }
+  .contenido ul {
+    font-size: 1.1rem; }
   .padreTarjetas {
     flex-direction: column; }
     .padreTarjetas .tarjeta {
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%; }
+      align-self: center;
+      width: 80%; }
       .padreTarjetas .tarjeta .gifs {
         height: 50%;
         width: 70%; }
-  .idea .parrafo {
-    font-size: 1.4rem;
-    line-height: 2rem; } }
+  .idea .ideaFlex .parrafo {
+    font-size: 1.2rem;
+    line-height: 2rem; }
+  .flexHoja .hojaForm {
+    font-size: 1rem; }
+    .flexHoja .hojaForm .boton{
+      font-size: 0.8rem; } }
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.6rem; }
+  .opciones .navPaises {
+    line-height: 4rem;
+    font-size: 1rem; }
+    .opciones .navPaises li a:hover {
+      font-size: 1.1rem; }
+    .opciones .tituloPaises {
+      font-size: 1.2rem; }
+  .contenido p {
+    font-size: 0.9rem; }
+  .contenido h5 {
+    font-size: 1.1rem; }
+  .contenido h3 {
+    font-size: 1.4rem; }
+  .contenido ul {
+    font-size: 0.9rem; }
+  .idea .ideaFlex .parrafo {
+    font-size: 1.1rem;
+    line-height: 2rem; }
+  .flexHoja {
+    padding-left: 5%;
+    padding-right: 5%; }
+  .flexHoja .hojaForm {
+    font-size: 0.9rem; }
+  footer {
+    font-size: 0.8rem; }
+    footer .derecha .boton {
+      font-size: 12px; }
+      footer .centro a {
+      font-size: 18px; } } 
+
+@media (max-width: 400px) {
+  h1{
+  font-size: 3.3rem; }
+  .intro {
+    font-size: 1.3rem; }
+  .secciones {
+    margin-bottom: 1.4rem; }
+  .experiencias ul .historias{
+    font-size: 1rem; }
+  .introduccion .containers {
+    margin-bottom: 1.4rem;
+    font-size: 1rem; }
+  .idea .ideaFlex .parrafo {
+    font-size: 1rem;
+    line-height: 1.7rem; }
+  .padreTarjetas .tarjeta {
+    width: 90%; 
+    margin-bottom: 1.4rem;}
+    .padreTarjetas .tarjeta .nombre {
+        font-size: 1.6rem; }
+    .padreTarjetas .tarjeta p {
+      font-size: 1rem; } }
