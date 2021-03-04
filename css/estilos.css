@@ -526,7 +526,7 @@ h2 {
   .padreTarjetas .tarjeta p {
     padding: 1%;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6rem; }
+      line-height: 1.6rem; } }
 
 @media (max-width: 740px) {
   h2 {
