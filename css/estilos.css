@@ -220,12 +220,12 @@ h2 {
     margin-bottom: 2rem;
     background-color: #7094a8;
     color: black;
+    transition: transform 1s, box-shadow 0.5s;
     font-size: 1.3rem; }
     .introduccion .containers h3 {
       text-decoration: underline #16344d; }
     .introduccion .containers:hover {
       transform: rotateY(25deg);
-      text-shadow: 8px 8px 8px black;
       box-shadow: 8px 8px 8px black; }
 
 /* Sección de fotos */
@@ -615,6 +615,10 @@ h2 {
   .introduccion .containers {
     margin-bottom: 1.4rem;
     font-size: 1rem; }
+  .idea{
+    margin-top: 1.2rem; }
+  .idea h2{
+    margin-top: 0; }
   .idea .ideaFlex .parrafo {
     font-size: 1rem;
     line-height: 1.7rem; }
